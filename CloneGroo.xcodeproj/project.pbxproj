@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CAA481D86688E10CCED67D0C /* Pods_CloneGroo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C028117D7736D84ECC45B19 /* Pods_CloneGroo.framework */; };
 		E87A50F928EEE1E6006B0DF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A50F828EEE1E6006B0DF2 /* AppDelegate.swift */; };
 		E87A50FB28EEE1E6006B0DF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A50FA28EEE1E6006B0DF2 /* SceneDelegate.swift */; };
-		E87A50FD28EEE1E6006B0DF2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A50FC28EEE1E6006B0DF2 /* ViewController.swift */; };
 		E87A510028EEE1E6006B0DF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87A50FE28EEE1E6006B0DF2 /* Main.storyboard */; };
 		E87A510228EEE1E7006B0DF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87A510128EEE1E7006B0DF2 /* Assets.xcassets */; };
 		E87A510528EEE1E7006B0DF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87A510328EEE1E7006B0DF2 /* LaunchScreen.storyboard */; };
+		E87A511328EEE56C006B0DF2 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511228EEE56C006B0DF2 /* BaseTabBarController.swift */; };
+		E87A511528EEE588006B0DF2 /* Tab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511428EEE588006B0DF2 /* Tab1ViewController.swift */; };
+		E87A511728EEE59A006B0DF2 /* Tab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511628EEE59A006B0DF2 /* Tab2ViewController.swift */; };
+		E87A511928EEE5A5006B0DF2 /* Tab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511828EEE5A5006B0DF2 /* Tab3ViewController.swift */; };
+		E87A511B28EEE5B0006B0DF2 /* Tab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */; };
+		E87A511D28EEE5BA006B0DF2 /* Tab5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */; };
+		E87A512028EEEB0B006B0DF2 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		198CE019AC9407FC39101B3C /* Pods-CloneGroo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneGroo.release.xcconfig"; path = "Target Support Files/Pods-CloneGroo/Pods-CloneGroo.release.xcconfig"; sourceTree = "<group>"; };
+		7C028117D7736D84ECC45B19 /* Pods_CloneGroo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloneGroo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75B4447898D6C7B5220F474 /* Pods-CloneGroo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloneGroo.debug.xcconfig"; path = "Target Support Files/Pods-CloneGroo/Pods-CloneGroo.debug.xcconfig"; sourceTree = "<group>"; };
 		E87A50F528EEE1E6006B0DF2 /* CloneGroo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloneGroo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87A50F828EEE1E6006B0DF2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E87A50FA28EEE1E6006B0DF2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E87A50FC28EEE1E6006B0DF2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E87A50FF28EEE1E6006B0DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E87A510128EEE1E7006B0DF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E87A510428EEE1E7006B0DF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E87A510628EEE1E7006B0DF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E87A511228EEE56C006B0DF2 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		E87A511428EEE588006B0DF2 /* Tab1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1ViewController.swift; sourceTree = "<group>"; };
+		E87A511628EEE59A006B0DF2 /* Tab2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2ViewController.swift; sourceTree = "<group>"; };
+		E87A511828EEE5A5006B0DF2 /* Tab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3ViewController.swift; sourceTree = "<group>"; };
+		E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab4ViewController.swift; sourceTree = "<group>"; };
+		E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab5ViewController.swift; sourceTree = "<group>"; };
+		E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA481D86688E10CCED67D0C /* Pods_CloneGroo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56B9029ED0AC8D8F7868599E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C028117D7736D84ECC45B19 /* Pods_CloneGroo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		878FDB5E6E9788D2D6696DCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E75B4447898D6C7B5220F474 /* Pods-CloneGroo.debug.xcconfig */,
+				198CE019AC9407FC39101B3C /* Pods-CloneGroo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E87A50EC28EEE1E6006B0DF2 = {
 			isa = PBXGroup;
 			children = (
+				E87A511E28EEEAFC006B0DF2 /* Extensions */,
+				E87A511128EEE52E006B0DF2 /* Tab5 */,
+				E87A511028EEE528006B0DF2 /* Tab4 */,
+				E87A510F28EEE51E006B0DF2 /* Tab3 */,
+				E87A510E28EEE511006B0DF2 /* Tab2 */,
+				E87A510C28EEE4F5006B0DF2 /* Tab1 */,
 				E87A50F728EEE1E6006B0DF2 /* CloneGroo */,
 				E87A50F628EEE1E6006B0DF2 /* Products */,
+				878FDB5E6E9788D2D6696DCA /* Pods */,
+				56B9029ED0AC8D8F7868599E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +100,61 @@
 			children = (
 				E87A50F828EEE1E6006B0DF2 /* AppDelegate.swift */,
 				E87A50FA28EEE1E6006B0DF2 /* SceneDelegate.swift */,
-				E87A50FC28EEE1E6006B0DF2 /* ViewController.swift */,
 				E87A50FE28EEE1E6006B0DF2 /* Main.storyboard */,
 				E87A510128EEE1E7006B0DF2 /* Assets.xcassets */,
 				E87A510328EEE1E7006B0DF2 /* LaunchScreen.storyboard */,
 				E87A510628EEE1E7006B0DF2 /* Info.plist */,
+				E87A511228EEE56C006B0DF2 /* BaseTabBarController.swift */,
 			);
 			path = CloneGroo;
+			sourceTree = "<group>";
+		};
+		E87A510C28EEE4F5006B0DF2 /* Tab1 */ = {
+			isa = PBXGroup;
+			children = (
+				E87A511428EEE588006B0DF2 /* Tab1ViewController.swift */,
+			);
+			path = Tab1;
+			sourceTree = "<group>";
+		};
+		E87A510E28EEE511006B0DF2 /* Tab2 */ = {
+			isa = PBXGroup;
+			children = (
+				E87A511628EEE59A006B0DF2 /* Tab2ViewController.swift */,
+			);
+			path = Tab2;
+			sourceTree = "<group>";
+		};
+		E87A510F28EEE51E006B0DF2 /* Tab3 */ = {
+			isa = PBXGroup;
+			children = (
+				E87A511828EEE5A5006B0DF2 /* Tab3ViewController.swift */,
+			);
+			path = Tab3;
+			sourceTree = "<group>";
+		};
+		E87A511028EEE528006B0DF2 /* Tab4 */ = {
+			isa = PBXGroup;
+			children = (
+				E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */,
+			);
+			path = Tab4;
+			sourceTree = "<group>";
+		};
+		E87A511128EEE52E006B0DF2 /* Tab5 */ = {
+			isa = PBXGroup;
+			children = (
+				E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */,
+			);
+			path = Tab5;
+			sourceTree = "<group>";
+		};
+		E87A511E28EEEAFC006B0DF2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +164,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E87A510928EEE1E7006B0DF2 /* Build configuration list for PBXNativeTarget "CloneGroo" */;
 			buildPhases = (
+				7441EE9060C3EA03CD33E690 /* [CP] Check Pods Manifest.lock */,
 				E87A50F128EEE1E6006B0DF2 /* Sources */,
 				E87A50F228EEE1E6006B0DF2 /* Frameworks */,
 				E87A50F328EEE1E6006B0DF2 /* Resources */,
+				54A55DC1288F04EF53AEA5D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +225,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		54A55DC1288F04EF53AEA5D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneGroo/Pods-CloneGroo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloneGroo/Pods-CloneGroo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloneGroo/Pods-CloneGroo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7441EE9060C3EA03CD33E690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloneGroo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E87A50F128EEE1E6006B0DF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E87A50FD28EEE1E6006B0DF2 /* ViewController.swift in Sources */,
+				E87A512028EEEB0B006B0DF2 /* ViewExtension.swift in Sources */,
+				E87A511328EEE56C006B0DF2 /* BaseTabBarController.swift in Sources */,
 				E87A50F928EEE1E6006B0DF2 /* AppDelegate.swift in Sources */,
+				E87A511D28EEE5BA006B0DF2 /* Tab5ViewController.swift in Sources */,
+				E87A511528EEE588006B0DF2 /* Tab1ViewController.swift in Sources */,
+				E87A511928EEE5A5006B0DF2 /* Tab3ViewController.swift in Sources */,
+				E87A511B28EEE5B0006B0DF2 /* Tab4ViewController.swift in Sources */,
 				E87A50FB28EEE1E6006B0DF2 /* SceneDelegate.swift in Sources */,
+				E87A511728EEE59A006B0DF2 /* Tab2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +422,7 @@
 		};
 		E87A510A28EEE1E7006B0DF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E75B4447898D6C7B5220F474 /* Pods-CloneGroo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +450,7 @@
 		};
 		E87A510B28EEE1E7006B0DF2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198CE019AC9407FC39101B3C /* Pods-CloneGroo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
