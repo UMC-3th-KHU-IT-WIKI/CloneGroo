@@ -20,6 +20,8 @@
 		E87A511B28EEE5B0006B0DF2 /* Tab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */; };
 		E87A511D28EEE5BA006B0DF2 /* Tab5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */; };
 		E87A512028EEEB0B006B0DF2 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */; };
+		E87F9259291D014900424757 /* Tab1BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F9258291D014900424757 /* Tab1BaseLayout.swift */; };
+		E87F925B291D02E700424757 /* Tab1CalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87F925A291D02E700424757 /* Tab1CalendarLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab4ViewController.swift; sourceTree = "<group>"; };
 		E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab5ViewController.swift; sourceTree = "<group>"; };
 		E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		E87F9258291D014900424757 /* Tab1BaseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1BaseLayout.swift; sourceTree = "<group>"; };
+		E87F925A291D02E700424757 /* Tab1CalendarLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1CalendarLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				E87A511428EEE588006B0DF2 /* Tab1ViewController.swift */,
+				E87F9258291D014900424757 /* Tab1BaseLayout.swift */,
+				E87F925A291D02E700424757 /* Tab1CalendarLayout.swift */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -276,10 +282,12 @@
 				E87A511328EEE56C006B0DF2 /* BaseTabBarController.swift in Sources */,
 				E87A50F928EEE1E6006B0DF2 /* AppDelegate.swift in Sources */,
 				E87A511D28EEE5BA006B0DF2 /* Tab5ViewController.swift in Sources */,
+				E87F925B291D02E700424757 /* Tab1CalendarLayout.swift in Sources */,
 				E87A511528EEE588006B0DF2 /* Tab1ViewController.swift in Sources */,
 				E87A511928EEE5A5006B0DF2 /* Tab3ViewController.swift in Sources */,
 				E87A511B28EEE5B0006B0DF2 /* Tab4ViewController.swift in Sources */,
 				E87A50FB28EEE1E6006B0DF2 /* SceneDelegate.swift in Sources */,
+				E87F9259291D014900424757 /* Tab1BaseLayout.swift in Sources */,
 				E87A511728EEE59A006B0DF2 /* Tab2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
