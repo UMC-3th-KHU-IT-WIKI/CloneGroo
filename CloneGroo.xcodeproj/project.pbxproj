@@ -20,6 +20,9 @@
 		E87A511B28EEE5B0006B0DF2 /* Tab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */; };
 		E87A511D28EEE5BA006B0DF2 /* Tab5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */; };
 		E87A512028EEEB0B006B0DF2 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */; };
+		F0410ACE291B344200F3EB08 /* Tab3Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0410ACD291B344200F3EB08 /* Tab3Cell.swift */; };
+		F0410AD0291B5BB600F3EB08 /* WriteDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0410ACF291B5BB600F3EB08 /* WriteDiaryViewController.swift */; };
+		F04A0E6B291CDFFF00348064 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04A0E6A291CDFFF00348064 /* Diary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		E87A511A28EEE5B0006B0DF2 /* Tab4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab4ViewController.swift; sourceTree = "<group>"; };
 		E87A511C28EEE5BA006B0DF2 /* Tab5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab5ViewController.swift; sourceTree = "<group>"; };
 		E87A511F28EEEB0B006B0DF2 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		F0410ACD291B344200F3EB08 /* Tab3Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab3Cell.swift; sourceTree = "<group>"; };
+		F0410ACF291B5BB600F3EB08 /* WriteDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDiaryViewController.swift; sourceTree = "<group>"; };
+		F04A0E6A291CDFFF00348064 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				E87A511828EEE5A5006B0DF2 /* Tab3ViewController.swift */,
+				F0410ACD291B344200F3EB08 /* Tab3Cell.swift */,
+				F0410ACF291B5BB600F3EB08 /* WriteDiaryViewController.swift */,
+				F04A0E6A291CDFFF00348064 /* Diary.swift */,
 			);
 			path = Tab3;
 			sourceTree = "<group>";
@@ -277,10 +286,13 @@
 				E87A50F928EEE1E6006B0DF2 /* AppDelegate.swift in Sources */,
 				E87A511D28EEE5BA006B0DF2 /* Tab5ViewController.swift in Sources */,
 				E87A511528EEE588006B0DF2 /* Tab1ViewController.swift in Sources */,
+				F0410ACE291B344200F3EB08 /* Tab3Cell.swift in Sources */,
 				E87A511928EEE5A5006B0DF2 /* Tab3ViewController.swift in Sources */,
 				E87A511B28EEE5B0006B0DF2 /* Tab4ViewController.swift in Sources */,
 				E87A50FB28EEE1E6006B0DF2 /* SceneDelegate.swift in Sources */,
 				E87A511728EEE59A006B0DF2 /* Tab2ViewController.swift in Sources */,
+				F0410AD0291B5BB600F3EB08 /* WriteDiaryViewController.swift in Sources */,
+				F04A0E6B291CDFFF00348064 /* Diary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +440,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NG2NLR2Z86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CloneGroo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -435,6 +448,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NG2NLR2Z86;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CloneGroo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -463,6 +478,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

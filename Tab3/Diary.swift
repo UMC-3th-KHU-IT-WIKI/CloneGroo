@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 struct Diary{
     var diaryimg : UIImage
-    var date : Date
+    var date : String
     var content : String
+    var uuidString : String
 
 }

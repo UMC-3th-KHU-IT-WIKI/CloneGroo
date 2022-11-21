@@ -9,27 +9,50 @@ import Foundation
 import SnapKit
 import PhotosUI
 import UIKit
-class WriteDiaryViewController : UIViewController{
-    var imgView : UIImageView = {
-        let img = UIImageView()
-        img.image = UIImage(systemName: "photo")
+//새로만들기, 편집모드
+enum DiaryMode {
+    case new
+    case edit
+}
+//new diary delegate
+protocol WriteDiaryViewDelegate : AnyObject {
+    func didselectRegister(diary : Diary)
+}
 
+class WriteDiaryViewController : UIViewController{
+    var content : String?
+    var date : String?
+    var photoimage : UIImage?
+    lazy var imgView : UIImageView = { //이미 있을때는 저장된 포토를 내보내고 아니면 시스템 포토.
+        let img = UIImageView()
+        if let photoimage = photoimage {
+            img.image = photoimage
+        }else{
+            img.image = UIImage(systemName: "photo")}
         return img
     }()
-    var dateLabel : UILabel = {
+    lazy var dateLabel : UILabel = {
         let label = UILabel()
         var formatter = DateFormatter()
         formatter.dateFormat = "YY.MM.dd"
-        var currentDate = formatter.string(from: Date())
-        label.text = currentDate
+        if let date = date {
+            label.text = date
+        }
+        else{
+            var currentDate = formatter.string(from: Date())
+            label.text = currentDate}
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
     let lineView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     lazy private var DiaryContents : UITextView = {
         let text = UITextView()
-        text.text = "오늘 식물과의 하루는 즐거웠나요?"
-        text.textColor = .placeholderText
+        if let content = content {
+            text.text = content
+        }
+        else{
+            text.text = "오늘 식물과의 하루는 즐거웠나요?"
+            text.textColor = .placeholderText}
         text.delegate = self
         return text
     }()
@@ -42,6 +65,8 @@ class WriteDiaryViewController : UIViewController{
         btn.addTarget(self, action: #selector(updateclick), for: .touchUpInside)
         return btn
     }()
+    weak var diarydelgate : WriteDiaryViewDelegate?//딜리게이트 패턴 이용
+    var diarymode : DiaryMode = .new
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
@@ -51,20 +76,20 @@ class WriteDiaryViewController : UIViewController{
         settextField()
         view.addSubview(finishBtn)
         finishBtn.snp.makeConstraints{
-           
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-30)
         }
-
-
     }
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) { //키보드나타나고 사라질때의 이벤트 설정.
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillshow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisAppear), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) { //메모리보호 뷰사라지면 옵저버 안쓰기에 지워줌.
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification,object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) //빈화면을 눌러줄때마다 키보드나 데이트 피커 사라짐.
     }
     @objc func keyboardWillshow(notification: NSNotification){
         if let keyboardFrame : NSValue = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue){
@@ -114,8 +139,19 @@ class WriteDiaryViewController : UIViewController{
         }
     }
     @objc func updateclick(){
-        print("bugtton")
-    }
+        guard let date = self.dateLabel.text else {return}
+        guard let contents = self.DiaryContents.text else {return}
+        guard let img = self.imgView.image else { return}
+        switch self.diarymode {
+        case .new :
+            let diary = Diary(diaryimg: img, date: date, content: contents, uuidString:  UUID().uuidString)
+            self.diarydelgate?.didselectRegister(diary: diary)
+            dismiss(animated: true)
+        case .edit:
+            let diary = Diary(diaryimg: img, date: date, content: contents, uuidString: UUID().uuidString)
+            NotificationCenter.default.post(name: NSNotification.Name("editDiary"), object: diary)
+ }
+        print("bugtton")    }
 }
 extension WriteDiaryViewController: UITextViewDelegate {
     
@@ -130,6 +166,7 @@ extension WriteDiaryViewController: UITextViewDelegate {
             textView.textColor = .placeholderText
         }
     }
+    
 }
 extension WriteDiaryViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPickerViewControllerDelegate{
     func photoview(){
@@ -165,7 +202,7 @@ extension WriteDiaryViewController : UIImagePickerControllerDelegate, UINavigati
             itemProvider.loadObject(ofClass: UIImage.self){
                 (image,error) in DispatchQueue.main.async {
                     self.imgView.image = image as? UIImage
-                    print(image)
+                    
                 }
             }
         }
