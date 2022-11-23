@@ -27,22 +27,23 @@ class Tab3Cell : UITableViewCell{
     lazy var contentslabel : UILabel = {
         let contentlabel  = UILabel()
         contentlabel.font = .systemFont(ofSize: 11, weight: .medium)
-        contentlabel.numberOfLines = 5
+        contentlabel.numberOfLines = 1
         contentlabel.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
-        contentlabel.textColor = .black
+        contentlabel.textColor = .secondaryLabel
         return contentlabel
     }()
     lazy var Writedatelabel : UILabel = {
         let label = UILabel()
         label.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
-        label.textColor = .secondaryLabel
-        label.font = .systemFont(ofSize: 12.0 , weight:  .bold    )
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 14.0 , weight:  .bold    )
         return label
     }()
     let deletebtn : UIButton = {
         let btn = UIButton(type: .system)
-        btn.setimage(systemname: "heart")
-        btn.addTarget(Tab3Cell.self, action: #selector(removediary), for: .touchUpInside)
+        btn.setimage(systemname: "ellipsis.circle")
+        btn.tintColor = .gray
+        btn.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2.0)
         return btn
     }()
 
@@ -89,9 +90,7 @@ class Tab3Cell : UITableViewCell{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func removediary(){
-        print("button")
-    }
+    
     
     
 }

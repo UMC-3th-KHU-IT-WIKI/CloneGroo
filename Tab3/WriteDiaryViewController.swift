@@ -23,6 +23,7 @@ class WriteDiaryViewController : UIViewController{
     var content : String?
     var date : String?
     var photoimage : UIImage?
+    var uuidstring: String?
     lazy var imgView : UIImageView = { //이미 있을때는 저장된 포토를 내보내고 아니면 시스템 포토.
         let img = UIImageView()
         if let photoimage = photoimage {
@@ -57,12 +58,20 @@ class WriteDiaryViewController : UIViewController{
         return text
     }()
     lazy var finishBtn : UIButton = {
-        let btn = UIButton(frame: CGRect(x: self.view.bounds.width/2 - 50, y: self.view.bounds.height - self.view.bounds.height/4, width: 100, height: 100))
+        let btn = UIButton(frame: CGRect(x: self.view.bounds.width/2 , y: self.view.bounds.height - self.view.bounds.height/4, width: 100, height: 100))
         btn.setTitle("완성", for: .normal)
-        btn.tintColor = .black
-        btn.backgroundColor = .black
+        btn.setTitleColor(.green, for: .normal)
         btn.setImage(.add, for: .normal)
         btn.addTarget(self, action: #selector(updateclick), for: .touchUpInside)
+        return btn
+    }()
+    lazy var noBtn : UIButton = {
+        let btn = UIButton(frame: CGRect(x: self.view.bounds.width/2 - 150, y: self.view.bounds.height - self.view.bounds.height/4, width: 100, height: 100))
+        btn.setTitle("취소", for: .normal)
+        btn.setTitleColor(.red, for: .normal)
+
+        btn.setImage(.remove, for: .normal)
+        btn.addTarget(self, action: #selector(cancelclick), for: .touchUpInside)
         return btn
     }()
     weak var diarydelgate : WriteDiaryViewDelegate?//딜리게이트 패턴 이용
@@ -75,9 +84,14 @@ class WriteDiaryViewController : UIViewController{
         self.view.isUserInteractionEnabled = true
         settextField()
         view.addSubview(finishBtn)
+        view.addSubview(noBtn)
         finishBtn.snp.makeConstraints{
-            $0.centerX.equalToSuperview()
+            $0.centerX.equalToSuperview().offset(30)
             $0.bottom.equalToSuperview().offset(-30)
+        }
+        noBtn.snp.makeConstraints{
+            $0.trailing.equalTo(finishBtn.snp.leading).offset(-10)
+            $0.bottom.equalTo(finishBtn)
         }
     }
     override func viewWillAppear(_ animated: Bool) { //키보드나타나고 사라질때의 이벤트 설정.
@@ -138,6 +152,13 @@ class WriteDiaryViewController : UIViewController{
             $0.bottom.equalToSuperview().offset(-150)
         }
     }
+//    func setUserDefaults(UIImage value: UIImage, _ key: String){
+//        let imgData = value.jpegData(compressionQuality: 1.0)
+//        UserDefaults.standard.set(imgData, forKey: key)
+//    }
+    @objc func cancelclick(){
+        dismiss(animated: true)
+    }
     @objc func updateclick(){
         guard let date = self.dateLabel.text else {return}
         guard let contents = self.DiaryContents.text else {return}
@@ -148,10 +169,12 @@ class WriteDiaryViewController : UIViewController{
             self.diarydelgate?.didselectRegister(diary: diary)
             dismiss(animated: true)
         case .edit:
-            let diary = Diary(diaryimg: img, date: date, content: contents, uuidString: UUID().uuidString)
+            guard let uuidstring = uuidstring else {return}
+            let diary = Diary(diaryimg: img, date: date, content: contents, uuidString: uuidstring)
             NotificationCenter.default.post(name: NSNotification.Name("editDiary"), object: diary)
+            dismiss(animated: true)
  }
-        print("bugtton")    }
+         }
 }
 extension WriteDiaryViewController: UITextViewDelegate {
     
